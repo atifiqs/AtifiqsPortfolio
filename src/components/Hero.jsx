@@ -54,7 +54,7 @@ const Hero = () => {
             <a href="https://www.facebook.com/atif.s.iqs" target="_blank" rel="noopener noreferrer">
               <FaFacebook className="w-6 h-6 text-gray-300 hover:text-blue-500 transition" />
             </a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/atifiqs" target="_blank" rel="noopener noreferrer">
               <FaGithub className="w-6 h-6 text-gray-300 hover:text-white transition" />
             </a>
           </div>
