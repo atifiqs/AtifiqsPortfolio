@@ -58,6 +58,17 @@ const Hero = () => {
               <FaGithub className="w-6 h-6 text-gray-300 hover:text-white transition" />
             </a>
           </div>
+          <motion.a
+            href="/Muhammad-Atif-Iqbal-CV.pdf" // update filename accordingly
+            download="Muhammad-Atif-Iqbal-CV.pdf"
+            className="mt-10 inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg shadow-md hover:scale-105 transition-transform font-semibold"
+            initial={{ opacity: 0}}
+            whileInView={{ opacity: 1}}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            Download My CV
+          </motion.a>
         </motion.div>
       </div>
     </section>

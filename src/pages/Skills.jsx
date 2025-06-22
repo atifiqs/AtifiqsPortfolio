@@ -13,19 +13,33 @@ const skills = [
 const Skills = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center flex-col bg-[#0f0f1c] py-10 px-4 text-white">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-        My Skills
-      </h2>
+      
+      <div className="flex md:hidden justify-center mb-4">
+        <motion.img
+          src={DeveloperAvatar}
+          alt="Developer Avatar"
+          className="w-[8rem] h-[8rem]"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+        />
+      </div>
+
       <motion.img
         src={DeveloperAvatar}
         alt="Developer Avatar"
-        className="absolute top-14 left-5 md:top-[5rem] md:left-10 w-14 h-14 md:w-36 md:h-36"
+        className="hidden md:block absolute top-[5rem] left-10 w-36 h-36"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4, delay: 0.1 }}
-
       />
+
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+        My Skills
+      </h2>
+
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
         {skills.map((skill, index) => (
           <motion.div

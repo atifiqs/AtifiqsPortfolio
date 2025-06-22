@@ -41,21 +41,26 @@ const Skills = () => {
       ref={sectionRef}
       className="relative min-h-screen flex items-center justify-center flex-col bg-[#0f0f1c] py-10 px-4 text-white overflow-hidden"
     >
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-        My Skills
-      </h2>
+      
 
       {/* 🌀 Scroll-following Avatar */}
+      <div className="relative w-full h-[10rem] flex justify-center items-start md:hidden">
+        <motion.img
+          src={DeveloperAvatar}
+          alt="Developer Avatar"
+          className="z-20 w-[8rem] h-[8rem] origin-top-left"
+          style={{ x: xMobile, y: yMobile, scale: scaleMobile }}
+        />
+      </div>
       <motion.img
         src={DeveloperAvatar}
         alt="Developer Avatar"
-        className="absolute z-20 top-[3rem] left-[9.2rem] md:top-[0.5rem] md:left-16 w-[8.5rem] h-[8.5rem] md:w-36 md:h-36 origin-top-left"
-        style={
-          isMobile
-            ? { x: xMobile, y: yMobile, scale: scaleMobile }
-            : { y: yDesktop }
-        }
+        className="hidden md:block absolute top-[0.5rem] left-16 w-36 h-36 origin-top-left"
+        style={{ y: yDesktop }}
       />
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+        My Skills
+      </h2>
 
       {/* Skills Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
@@ -74,18 +79,7 @@ const Skills = () => {
         ))}
       </div>
 
-      {/* Download CV Button */}
-      <motion.a
-        href="/Muhammad-Atif-Iqbal-CV.pdf" // update filename accordingly
-        download="Muhammad-Atif-Iqbal-CV.pdf"
-        className="mt-10 inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg shadow-md hover:scale-105 transition-transform font-semibold"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        Download My CV
-      </motion.a>
+      
 
     </section>
   );
