@@ -19,7 +19,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-b from-[#1a1a2e] via-[#0f0f1c] to-[#111111] py-16 px-6 text-white">
+    <section className="min-h-screen bg-gradient-to-b from-[#1a1a2e] via-[#0f0f1c] to-[#111111] py-16 px-6 text-white flex items-center justify-center">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-10 text-center">Experience</h2>
 

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section className="bg-gradient-to-b from-[#111111] via-[#0f0f1c] to-[#1a1a2e] py-12 px-6 text-white">
+    <section className="min-h-screen bg-gradient-to-b from-[#111111] via-[#0f0f1c] to-[#1a1a2e] py-12 px-6 text-white flex items-center justify-center">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* Profile or Illustration */}
         <motion.img
